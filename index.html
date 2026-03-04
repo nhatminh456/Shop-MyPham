@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mỹ Phẩm Beauty – Chăm Sóc Sắc Đẹp</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-spa"></i> Beauty Shop
+      </a>
+
+      <nav class="nav">
+        <a href="#home">Trang chủ</a>
+        <a href="#categories">Danh mục</a>
+        <a href="#products">Sản phẩm</a>
+        <a href="#about">Giới thiệu</a>
+        <a href="#contact">Liên hệ</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="btn-icon" id="searchToggle" aria-label="Tìm kiếm">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="btn-icon" id="cartToggle" aria-label="Giỏ hàng">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+        <button class="btn-icon nav-toggle" id="navToggle" aria-label="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Search bar -->
+    <div class="search-bar" id="searchBar">
+      <div class="container">
+        <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm..." />
+        <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero__content container">
+      <span class="hero__tag">Bộ sưu tập mới 2025</span>
+      <h1>Tỏa Sáng Vẻ Đẹp<br /><span>Tự Nhiên Của Bạn</span></h1>
+      <p>Khám phá hàng nghìn sản phẩm mỹ phẩm cao cấp, chính hãng từ các thương hiệu hàng đầu thế giới.</p>
+      <div class="hero__btns">
+        <a href="#products" class="btn btn--primary">Mua ngay</a>
+        <a href="#categories" class="btn btn--outline">Khám phá</a>
+      </div>
+    </div>
+    <div class="hero__image">
+      <div class="hero__blob"></div>
+      <div class="hero__circle hero__circle--1"></div>
+      <div class="hero__circle hero__circle--2"></div>
+      <div class="hero__products-float">
+        <div class="float-badge float-badge--1">
+          <i class="fa-solid fa-star"></i> 4.9 / 5
+        </div>
+        <div class="float-badge float-badge--2">
+          <i class="fa-solid fa-shield-halved"></i> Chính hãng 100%
+        </div>
+        <div class="float-badge float-badge--3">
+          <i class="fa-solid fa-truck"></i> Miễn phí ship
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="stats">
+    <div class="container stats__inner">
+      <div class="stat-card">
+        <strong>500+</strong>
+        <span>Sản phẩm</span>
+      </div>
+      <div class="stat-card">
+        <strong>50+</strong>
+        <span>Thương hiệu</span>
+      </div>
+      <div class="stat-card">
+        <strong>10K+</strong>
+        <span>Khách hàng</span>
+      </div>
+      <div class="stat-card">
+        <strong>99%</strong>
+        <span>Hài lòng</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORIES ============ -->
+  <section class="categories section" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <h2>Danh Mục Sản Phẩm</h2>
+        <p>Tìm kiếm theo danh mục yêu thích của bạn</p>
+      </div>
+      <div class="categories__grid">
+        <a href="#products" class="category-card" data-filter="skincare">
+          <div class="category-card__icon" style="--clr:#f9c6d4">
+            <i class="fa-solid fa-droplet"></i>
+          </div>
+          <span>Dưỡng Da</span>
+        </a>
+        <a href="#products" class="category-card" data-filter="makeup">
+          <div class="category-card__icon" style="--clr:#fde2a3">
+            <i class="fa-solid fa-palette"></i>
+          </div>
+          <span>Trang Điểm</span>
+        </a>
+        <a href="#products" class="category-card" data-filter="perfume">
+          <div class="category-card__icon" style="--clr:#d4c5f9">
+            <i class="fa-solid fa-wind"></i>
+          </div>
+          <span>Nước Hoa</span>
+        </a>
+        <a href="#products" class="category-card" data-filter="haircare">
+          <div class="category-card__icon" style="--clr:#c5f0d4">
+            <i class="fa-solid fa-scissors"></i>
+          </div>
+          <span>Chăm Sóc Tóc</span>
+        </a>
+        <a href="#products" class="category-card" data-filter="bodycare">
+          <div class="category-card__icon" style="--clr:#fbc5c5">
+            <i class="fa-solid fa-spa"></i>
+          </div>
+          <span>Dưỡng Thể</span>
+        </a>
+        <a href="#products" class="category-card" data-filter="sunscreen">
+          <div class="category-card__icon" style="--clr:#fef3c7">
+            <i class="fa-solid fa-sun"></i>
+          </div>
+          <span>Chống Nắng</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCTS ============ -->
+  <section class="products section" id="products">
+    <div class="container">
+      <div class="section-header">
+        <h2>Sản Phẩm Nổi Bật</h2>
+        <p>Những sản phẩm được yêu thích nhất</p>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">Tất cả</button>
+        <button class="filter-tab" data-filter="skincare">Dưỡng Da</button>
+        <button class="filter-tab" data-filter="makeup">Trang Điểm</button>
+        <button class="filter-tab" data-filter="perfume">Nước Hoa</button>
+        <button class="filter-tab" data-filter="haircare">Chăm Sóc Tóc</button>
+        <button class="filter-tab" data-filter="bodycare">Dưỡng Thể</button>
+        <button class="filter-tab" data-filter="sunscreen">Chống Nắng</button>
+      </div>
+
+      <!-- Products grid -->
+      <div class="products__grid" id="productsGrid">
+        <!-- Dưỡng Da -->
+        <div class="product-card" data-category="skincare">
+          <div class="product-card__badge">Bán chạy</div>
+          <div class="product-card__img" style="background:linear-gradient(135deg,#fce4ec,#f8bbd9)">
+            <i class="fa-solid fa-bottle-droplet"></i>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__cat">Dưỡng Da</span>
+            <h3>Serum Dưỡng Ẩm Vitamin C</h3>
+            <div class="product-card__stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+              <span>(128)</span>
+            </div>
+            <div class="product-card__price">
+              <strong>320.000₫</strong>
+              <s>450.000₫</s>
+            </div>
+            <button class="btn btn--primary btn--sm add-to-cart"
+              data-name="Serum Dưỡng Ẩm Vitamin C" data-price="320000">
+              <i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="skincare">
+          <div class="product-card__img" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9)">
+            <i class="fa-solid fa-leaf"></i>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__cat">Dưỡng Da</span>
+            <h3>Kem Dưỡng Da Ban Đêm</h3>
+            <div class="product-card__stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>(85)</span>
+            </div>
+            <div class="product-card__price">
+              <strong>285.000₫</strong>
+              <s>380.000₫</s>
+            </div>
+            <button class="btn btn--primary btn--sm add-to-cart"
+              data-name="Kem Dưỡng Da Ban Đêm" data-price="285000">
+              <i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ
+            </button>
+          </div>
+        </div>
+
+        <!-- Trang Điểm -->
+        <div class="product-card" data-category="makeup">
+          <div class="product-card__badge product-card__badge--new">Mới</div>
+          <div class="product-card__img" style="background:linear-gradient(135deg,#fce4ec,#f48fb1)">
+            <i class="fa-solid fa-brush"></i>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__cat">Trang Điểm</span>
+            <h3>Son Môi Lì Siêu Mịn</h3>
+            <div class="product-card__stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>(214)</span>
+            </div>
+            <div class="product-card__price">
+              <strong>180.000₫</strong>
+            </div>
+            <button class="btn btn--primary btn--sm add-to-cart"
+              data-name="Son Môi Lì Siêu Mịn" data-price="180000">
+              <i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="makeup">
+          <div class="product-card__img" style="background:linear-gradient(135deg,#fff9c4,#fff176)">
+            <i class="fa-solid fa-wand-sparkles"></i>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__cat">Trang Điểm</span>
+            <h3>Phấn Phủ Kiềm Dầu</h3>
+            <div class="product-card__stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <span>(97)</span>
+            </div>
+            <div class="product-card__price">
+              <strong>250.000₫</strong>
+              <s>320.000₫</s>
+            </div>
+            <button class="btn btn--primary btn--sm add-to-cart"
+              data-name="Phấn Phủ Kiềm Dầu" data-price="250000">
+              <i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ
+            </button>
+          </div>
+        </div>
+
+        <!-- Nước Hoa -->
+        <div class="product-card" data-category="perfume">
+          <div class="product-card__badge">Yêu thích</div>
+          <div class="product-card__img" style="background:linear-gradient(135deg,#ede7f6,#ce93d8)">
+            <i class="fa-solid fa-wind"></i>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__cat">Nước Hoa</span>
+            <h3>Nước Hoa Hồng Rose Gold</h3>
+            <div class="product-card__stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>(163)</span>
+            </div>
+            <div class="product-card__price">
+              <strong>850.000₫</strong>
+              <s>1.100.000₫</s>
+            </div>
+            <button class="btn btn--primary btn--sm add-to-cart"
+              data-name="Nước Hoa Hồng Rose Gold" data-price="850000">
+              <i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="perfume">
+          <div class="product-card__img" style="background:linear-gradient(135deg,#e3f2fd,#90caf9)">
+            <i class="fa-solid fa-bottle-water"></i>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__cat">Nước Hoa</span>
+            <h3>Nước Hoa Nam Fresh Blue</h3>
+            <div class="product-card__stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+              <span>(79)</span>
+            </div>
+            <div class="product-card__price">
+              <strong>720.000₫</strong>
+            </div>
+            <button class="btn btn--primary btn--sm add-to-cart"
+              data-name="Nước Hoa Nam Fresh Blue" data-price="720000">
+              <i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ
+            </button>
+          </div>
+        </div>
+
+        <!-- Chăm Sóc Tóc -->
+        <div class="product-card" data-category="haircare">
+          <div class="product-card__img" style="background:linear-gradient(135deg,#e8f5e9,#a5d6a7)">
+            <i class="fa-solid fa-pump-soap"></i>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__cat">Chăm Sóc Tóc</span>
+            <h3>Dầu Xả Phục Hồi Tóc Hư Tổn</h3>
+            <div class="product-card__stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <span>(55)</span>
+            </div>
+            <div class="product-card__price">
+              <strong>195.000₫</strong>
+              <s>260.000₫</s>
+            </div>
+            <button class="btn btn--primary btn--sm add-to-cart"
+              data-name="Dầu Xả Phục Hồi Tóc Hư Tổn" data-price="195000">
+              <i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ
+            </button>
+          </div>
+        </div>
+
+        <!-- Dưỡng Thể -->
+        <div class="product-card" data-category="bodycare">
+          <div class="product-card__badge product-card__badge--sale">-30%</div>
+          <div class="product-card__img" style="background:linear-gradient(135deg,#fce4ec,#f48fb1)">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__cat">Dưỡng Thể</span>
+            <h3>Sữa Dưỡng Thể Trắng Da</h3>
+            <div class="product-card__stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>(142)</span>
+            </div>
+            <div class="product-card__price">
+              <strong>175.000₫</strong>
+              <s>250.000₫</s>
+            </div>
+            <button class="btn btn--primary btn--sm add-to-cart"
+              data-name="Sữa Dưỡng Thể Trắng Da" data-price="175000">
+              <i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ
+            </button>
+          </div>
+        </div>
+
+        <!-- Chống Nắng -->
+        <div class="product-card" data-category="sunscreen">
+          <div class="product-card__img" style="background:linear-gradient(135deg,#fffde7,#ffee58)">
+            <i class="fa-solid fa-sun"></i>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__cat">Chống Nắng</span>
+            <h3>Kem Chống Nắng SPF 50+ PA++++</h3>
+            <div class="product-card__stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+              <span>(201)</span>
+            </div>
+            <div class="product-card__price">
+              <strong>390.000₫</strong>
+              <s>480.000₫</s>
+            </div>
+            <button class="btn btn--primary btn--sm add-to-cart"
+              data-name="Kem Chống Nắng SPF 50+ PA++++" data-price="390000">
+              <i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="skincare">
+          <div class="product-card__badge product-card__badge--new">Mới</div>
+          <div class="product-card__img" style="background:linear-gradient(135deg,#fce4ec,#ef9a9a)">
+            <i class="fa-solid fa-flask"></i>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__cat">Dưỡng Da</span>
+            <h3>Toner Cân Bằng Da Hoa Hồng</h3>
+            <div class="product-card__stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>(189)</span>
+            </div>
+            <div class="product-card__price">
+              <strong>210.000₫</strong>
+              <s>280.000₫</s>
+            </div>
+            <button class="btn btn--primary btn--sm add-to-cart"
+              data-name="Toner Cân Bằng Da Hoa Hồng" data-price="210000">
+              <i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="makeup">
+          <div class="product-card__img" style="background:linear-gradient(135deg,#f3e5f5,#ba68c8)">
+            <i class="fa-solid fa-eye"></i>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__cat">Trang Điểm</span>
+            <h3>Mascara Dày Mi Không Thấm Nước</h3>
+            <div class="product-card__stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <span>(66)</span>
+            </div>
+            <div class="product-card__price">
+              <strong>145.000₫</strong>
+            </div>
+            <button class="btn btn--primary btn--sm add-to-cart"
+              data-name="Mascara Dày Mi Không Thấm Nước" data-price="145000">
+              <i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="bodycare">
+          <div class="product-card__img" style="background:linear-gradient(135deg,#e0f7fa,#80deea)">
+            <i class="fa-solid fa-soap"></i>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__cat">Dưỡng Thể</span>
+            <h3>Tẩy Tế Bào Chết Body Muối Biển</h3>
+            <div class="product-card__stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+              <span>(93)</span>
+            </div>
+            <div class="product-card__price">
+              <strong>135.000₫</strong>
+              <s>180.000₫</s>
+            </div>
+            <button class="btn btn--primary btn--sm add-to-cart"
+              data-name="Tẩy Tế Bào Chết Body Muối Biển" data-price="135000">
+              <i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BRANDS ============ -->
+  <section class="brands section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Thương Hiệu Nổi Tiếng</h2>
+        <p>Đối tác chính thức của các thương hiệu hàng đầu</p>
+      </div>
+      <div class="brands__row">
+        <div class="brand-badge">L'Oréal</div>
+        <div class="brand-badge">Lancôme</div>
+        <div class="brand-badge">Innisfree</div>
+        <div class="brand-badge">The Ordinary</div>
+        <div class="brand-badge">Cetaphil</div>
+        <div class="brand-badge">Laneige</div>
+        <div class="brand-badge">Chanel</div>
+        <div class="brand-badge">Dior</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about section" id="about">
+    <div class="container about__inner">
+      <div class="about__image">
+        <div class="about__blob"></div>
+        <div class="about__icon-grid">
+          <div class="about__icon-box" style="--clr:#fce4ec">
+            <i class="fa-solid fa-certificate"></i>
+            <span>Chính hãng</span>
+          </div>
+          <div class="about__icon-box" style="--clr:#e8f5e9">
+            <i class="fa-solid fa-truck-fast"></i>
+            <span>Giao nhanh</span>
+          </div>
+          <div class="about__icon-box" style="--clr:#ede7f6">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>Bảo mật</span>
+          </div>
+          <div class="about__icon-box" style="--clr:#fff9c4">
+            <i class="fa-solid fa-headset"></i>
+            <span>Hỗ trợ 24/7</span>
+          </div>
+        </div>
+      </div>
+      <div class="about__content">
+        <span class="section-tag">Về Chúng Tôi</span>
+        <h2>Cam Kết Sắc Đẹp<br />Từ Thiên Nhiên</h2>
+        <p>Beauty Shop là địa chỉ uy tín chuyên cung cấp mỹ phẩm chính hãng, được nhập khẩu trực tiếp từ các thương hiệu danh tiếng thế giới. Chúng tôi cam kết mang đến sản phẩm chất lượng, an toàn cho da và phù hợp với mọi loại da.</p>
+        <ul class="about__list">
+          <li><i class="fa-solid fa-check"></i> 100% sản phẩm chính hãng, có nguồn gốc rõ ràng</li>
+          <li><i class="fa-solid fa-check"></i> Kiểm định chất lượng nghiêm ngặt trước khi bán</li>
+          <li><i class="fa-solid fa-check"></i> Đội ngũ tư vấn da liễu chuyên nghiệp</li>
+          <li><i class="fa-solid fa-check"></i> Chính sách đổi trả linh hoạt trong 30 ngày</li>
+        </ul>
+        <a href="#products" class="btn btn--primary">Xem sản phẩm</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="testimonials section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Khách Hàng Nói Gì</h2>
+        <p>Những chia sẻ chân thực từ khách hàng của chúng tôi</p>
+      </div>
+      <div class="testimonials__grid">
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p>"Sản phẩm serum vitamin C thực sự rất tốt, da mình sáng hơn hẳn sau 2 tuần sử dụng. Shop giao hàng nhanh, đóng gói cẩn thận!"</p>
+          <div class="testimonial-card__author">
+            <div class="author-avatar" style="background:#f9c6d4">N</div>
+            <div>
+              <strong>Nguyễn Thị Lan</strong>
+              <span>Hà Nội</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p>"Mua son môi ở đây lần 2 rồi, màu sắc chuẩn như mô tả, son lì mà không khô môi. Sẽ tiếp tục ủng hộ shop!"</p>
+          <div class="testimonial-card__author">
+            <div class="author-avatar" style="background:#d4c5f9">M</div>
+            <div>
+              <strong>Minh Châu</strong>
+              <span>TP. Hồ Chí Minh</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <p>"Kem chống nắng SPF 50+ rất nhẹ, không gây bết rít. Đây là lần đầu mình tìm được kem chống nắng thực sự phù hợp với da dầu."</p>
+          <div class="testimonial-card__author">
+            <div class="author-avatar" style="background:#c5f0d4">H</div>
+            <div>
+              <strong>Hương Trang</strong>
+              <span>Đà Nẵng</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact section" id="contact">
+    <div class="container contact__inner">
+      <div class="contact__info">
+        <span class="section-tag">Liên Hệ</span>
+        <h2>Kết Nối Với Chúng Tôi</h2>
+        <p>Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn mọi lúc.</p>
+        <ul class="contact__details">
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>123 Đường Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <span>1800 1234 (miễn phí)</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <span>beautyshop@example.com</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-clock"></i>
+            <span>Thứ 2 – Chủ Nhật: 8:00 – 22:00</span>
+          </li>
+        </ul>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <form class="contact__form" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="cName">Họ và tên</label>
+          <input type="text" id="cName" placeholder="Nhập họ và tên..." required />
+        </div>
+        <div class="form-group">
+          <label for="cEmail">Email</label>
+          <input type="email" id="cEmail" placeholder="email@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="cPhone">Số điện thoại</label>
+          <input type="tel" id="cPhone" placeholder="0912 345 678" />
+        </div>
+        <div class="form-group">
+          <label for="cMessage">Tin nhắn</label>
+          <textarea id="cMessage" rows="4" placeholder="Nội dung tin nhắn..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary">
+          <i class="fa-solid fa-paper-plane"></i> Gửi tin nhắn
+        </button>
+        <p class="form-success" id="formSuccess">Cảm ơn bạn! Chúng tôi sẽ liên hệ sớm nhất.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col footer__col--brand">
+        <a href="index.html" class="logo logo--white">
+          <i class="fa-solid fa-spa"></i> Beauty Shop
+        </a>
+        <p>Địa chỉ mua sắm mỹ phẩm chính hãng, uy tín hàng đầu Việt Nam.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Danh Mục</h4>
+        <ul>
+          <li><a href="#products">Dưỡng Da</a></li>
+          <li><a href="#products">Trang Điểm</a></li>
+          <li><a href="#products">Nước Hoa</a></li>
+          <li><a href="#products">Chăm Sóc Tóc</a></li>
+          <li><a href="#products">Dưỡng Thể</a></li>
+          <li><a href="#products">Chống Nắng</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Hỗ Trợ</h4>
+        <ul>
+          <li><a href="#">Chính sách đổi trả</a></li>
+          <li><a href="#">Chính sách vận chuyển</a></li>
+          <li><a href="#">Bảo mật thông tin</a></li>
+          <li><a href="#">Câu hỏi thường gặp</a></li>
+          <li><a href="#">Hướng dẫn mua hàng</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Đăng Ký Nhận Tin</h4>
+        <p>Nhận ưu đãi độc quyền và thông tin sản phẩm mới nhất.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Email của bạn..." required />
+          <button type="submit" aria-label="Đăng ký">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </form>
+        <div class="payment-icons">
+          <span title="Visa"><i class="fa-brands fa-cc-visa"></i></span>
+          <span title="Mastercard"><i class="fa-brands fa-cc-mastercard"></i></span>
+          <span title="PayPal"><i class="fa-brands fa-cc-paypal"></i></span>
+          <span title="Apple Pay"><i class="fa-brands fa-cc-apple-pay"></i></span>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2025 Beauty Shop. Tất cả quyền được bảo lưu.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ CART SIDEBAR ============ -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-sidebar__header">
+      <h3><i class="fa-solid fa-bag-shopping"></i> Giỏ hàng</h3>
+      <button class="cart-sidebar__close" id="cartClose" aria-label="Đóng giỏ hàng">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="cart-sidebar__body" id="cartItems">
+      <div class="cart-empty" id="cartEmpty">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <p>Giỏ hàng trống</p>
+      </div>
+    </div>
+    <div class="cart-sidebar__footer" id="cartFooter" style="display:none">
+      <div class="cart-total">
+        <span>Tổng cộng:</span>
+        <strong id="cartTotal">0₫</strong>
+      </div>
+      <button class="btn btn--primary" style="width:100%">
+        <i class="fa-solid fa-credit-card"></i> Thanh toán
+      </button>
+    </div>
+  </aside>
+
+  <!-- ============ TOAST ============ -->
+  <div class="toast" id="toast"></div>
+
+  <!-- ============ BACK TO TOP ============ -->
+  <button class="back-to-top" id="backToTop" aria-label="Về đầu trang">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
