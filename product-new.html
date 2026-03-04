@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <!-- Meta Tags Cơ bản -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>Serum Vitamin C Rạng Rỡ | LUXE Beauty</title>
+    <meta name="description" content="Serum Vitamin C Rạng Rỡ - Tinh chất làm sáng da, mờ thâm nám với công thức độc quyền từ LUXE Beauty. Mua ngay với ưu đãi đặc biệt.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- ============================================
+         NAVBAR
+    ============================================= -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="navbar-container">
+            <a href="index-new.html" class="nav-logo">LUXE</a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index-new.html" class="nav-link">Trang Chủ</a></li>
+                <li><a href="index-new.html#categories" class="nav-link">Danh Mục</a></li>
+                <li><a href="index-new.html#products" class="nav-link active">Sản Phẩm</a></li>
+                <li><a href="index-new.html#reviews" class="nav-link">Đánh Giá</a></li>
+                <li><a href="index-new.html#blog" class="nav-link">Blog</a></li>
+                <li><a href="index-new.html#contact" class="nav-link">Liên Hệ</a></li>
+            </ul>
+            
+            <div class="nav-icons">
+                <a href="#" class="nav-icon" aria-label="Tìm kiếm">
+                    <i class="fas fa-search"></i>
+                </a>
+                <a href="#" class="nav-icon" aria-label="Yêu thích">
+                    <i class="fas fa-heart"></i>
+                </a>
+                <a href="cart-new.html" class="nav-icon" aria-label="Giỏ hàng">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+            
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         BREADCRUMB
+    ============================================= -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li><a href="index-new.html">Trang chủ</a></li>
+                <li><span>/</span></li>
+                <li><a href="#">Chăm sóc da</a></li>
+                <li><span>/</span></li>
+                <li class="current">Serum Vitamin C Rạng Rỡ</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ============================================
+         PRODUCT DETAIL
+    ============================================= -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-detail-container">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="gallery-main">
+                        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Serum Vitamin C" id="mainImage">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <div class="gallery-thumb active" onclick="changeImage(this, 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')">
+                            <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Thumbnail 1">
+                        </div>
+                        <div class="gallery-thumb" onclick="changeImage(this, 'https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')">
+                            <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Thumbnail 2">
+                        </div>
+                        <div class="gallery-thumb" onclick="changeImage(this, 'https://images.unsplash.com/photo-1570194065650-d99fb4de8e38?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')">
+                            <img src="https://images.unsplash.com/photo-1570194065650-d99fb4de8e38?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Thumbnail 3">
+                        </div>
+                        <div class="gallery-thumb" onclick="changeImage(this, 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')">
+                            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Thumbnail 4">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-detail-info">
+                    <span class="product-detail-brand">LUXE SKINCARE</span>
+                    <h1 class="product-detail-title">Serum Vitamin C Rạng Rỡ</h1>
+                    
+                    <div class="product-detail-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span>4.8 (126 đánh giá)</span>
+                    </div>
+                    
+                    <div class="product-detail-price">
+                        <span class="current">680.000₫</span>
+                        <span class="original">850.000₫</span>
+                        <span class="discount">-20%</span>
+                    </div>
+                    
+                    <p class="product-description">
+                        Serum Vitamin C Rạng Rỡ được chiết xuất từ cam Yuzu Nhật Bản với nồng độ 
+                        Vitamin C ổn định 15%, kết hợp Niacinamide và Hyaluronic Acid giúp làm sáng da, 
+                        mờ thâm nám, cải thiện tông màu da không đều. Công thức nhẹ nhàng, thẩm thấu 
+                        nhanh, phù hợp mọi loại da kể cả da nhạy cảm.
+                    </p>
+                    
+                    <!-- Product Options -->
+                    <div class="product-options">
+                        <div class="option-group">
+                            <label class="option-label">Dung Tích:</label>
+                            <div class="option-sizes">
+                                <button class="size-btn active">30ml</button>
+                                <button class="size-btn">50ml</button>
+                                <button class="size-btn">100ml</button>
+                            </div>
+                        </div>
+                        
+                        <div class="option-group">
+                            <label class="option-label">Số Lượng:</label>
+                            <div class="quantity-selector">
+                                <button class="qty-btn" onclick="changeQuantity(-1)">−</button>
+                                <input type="number" class="qty-input" id="quantity" value="1" min="1" max="10">
+                                <button class="qty-btn" onclick="changeQuantity(1)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Add to Cart -->
+                    <div class="product-add-section">
+                        <button class="btn-add-to-cart" id="addToCartBtn">
+                            <i class="fas fa-shopping-bag"></i>
+                            Thêm Vào Giỏ Hàng
+                        </button>
+                        <button class="btn-wishlist" aria-label="Thêm vào yêu thích">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Product Meta -->
+                    <div class="product-meta">
+                        <div class="meta-item">
+                            <strong>Mã SP:</strong>
+                            <span>LUXE-SRM-001</span>
+                        </div>
+                        <div class="meta-item">
+                            <strong>Danh mục:</strong>
+                            <span>Chăm sóc da, Serum</span>
+                        </div>
+                        <div class="meta-item">
+                            <strong>Thương hiệu:</strong>
+                            <span>LUXE Skincare</span>
+                        </div>
+                        <div class="meta-item">
+                            <strong>Tình trạng:</strong>
+                            <span style="color: #28a745;">Còn hàng</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product Tabs -->
+            <div class="product-tabs">
+                <div class="tab-nav">
+                    <button class="tab-btn active" data-tab="description">Mô Tả</button>
+                    <button class="tab-btn" data-tab="ingredients">Thành Phần</button>
+                    <button class="tab-btn" data-tab="howto">Hướng Dẫn</button>
+                    <button class="tab-btn" data-tab="reviews">Đánh Giá (126)</button>
+                </div>
+                
+                <!-- Tab: Description -->
+                <div class="tab-content active" id="description">
+                    <h4>Mô Tả Sản Phẩm</h4>
+                    <p>
+                        Serum Vitamin C Rạng Rỡ là sản phẩm chăm sóc da cao cấp được nghiên cứu và 
+                        phát triển bởi đội ngũ chuyên gia da liễu hàng đầu. Với công thức độc quyền 
+                        kết hợp Vitamin C dạng ổn định (Ascorbyl Glucoside) cùng các thành phần 
+                        dưỡng da quý giá, sản phẩm giúp:
+                    </p>
+                    <ul>
+                        <li>Làm sáng da rõ rệt sau 2-4 tuần sử dụng</li>
+                        <li>Mờ thâm nám, tàn nhang và vết thâm mụn</li>
+                        <li>Chống oxy hóa, bảo vệ da khỏi tác hại của môi trường</li>
+                        <li>Kích thích sản sinh collagen, giúp da săn chắc</li>
+                        <li>Cấp ẩm sâu, duy trì độ ẩm suốt ngày dài</li>
+                    </ul>
+                    <p>
+                        Sản phẩm đã được kiểm nghiệm da liễu và không chứa paraben, sulfate, 
+                        hương liệu tổng hợp. An toàn cho cả da nhạy cảm.
+                    </p>
+                </div>
+                
+                <!-- Tab: Ingredients -->
+                <div class="tab-content" id="ingredients">
+                    <h4>Thành Phần Chính</h4>
+                    <ul>
+                        <li><strong>Ascorbyl Glucoside 15%:</strong> Dạng Vitamin C ổn định, làm sáng da hiệu quả mà không gây kích ứng</li>
+                        <li><strong>Niacinamide 5%:</strong> Thu nhỏ lỗ chân lông, kiểm soát dầu nhờn</li>
+                        <li><strong>Hyaluronic Acid:</strong> Cấp ẩm sâu, giữ nước cho da căng mướt</li>
+                        <li><strong>Chiết xuất cam Yuzu:</strong> Chống oxy hóa tự nhiên từ Nhật Bản</li>
+                        <li><strong>Vitamin E:</strong> Bảo vệ da khỏi tác hại của tia UV</li>
+                        <li><strong>Panthenol (B5):</strong> Làm dịu và phục hồi da</li>
+                    </ul>
+                    <h4 style="margin-top: 25px;">Thành Phần Đầy Đủ</h4>
+                    <p style="font-size: 0.9rem; color: #666;">
+                        Aqua, Ascorbyl Glucoside, Niacinamide, Sodium Hyaluronate, Glycerin, 
+                        Butylene Glycol, Citrus Junos (Yuzu) Fruit Extract, Tocopheryl Acetate, 
+                        Panthenol, Allantoin, Carbomer, Triethanolamine, Phenoxyethanol, 
+                        Ethylhexylglycerin.
+                    </p>
+                </div>
+                
+                <!-- Tab: How to Use -->
+                <div class="tab-content" id="howto">
+                    <h4>Hướng Dẫn Sử Dụng</h4>
+                    <ul>
+                        <li><strong>Bước 1:</strong> Làm sạch da với sữa rửa mặt và toner</li>
+                        <li><strong>Bước 2:</strong> Lấy 2-3 giọt serum ra lòng bàn tay</li>
+                        <li><strong>Bước 3:</strong> Thoa đều lên mặt và cổ, tránh vùng mắt</li>
+                        <li><strong>Bước 4:</strong> Vỗ nhẹ để serum thẩm thấu hoàn toàn</li>
+                        <li><strong>Bước 5:</strong> Tiếp tục với kem dưỡng và kem chống nắng (ban ngày)</li>
+                    </ul>
+                    <h4 style="margin-top: 25px;">Lưu Ý</h4>
+                    <ul>
+                        <li>Sử dụng sáng và tối để đạt hiệu quả tốt nhất</li>
+                        <li>Luôn sử dụng kem chống nắng khi dùng ban ngày</li>
+                        <li>Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp</li>
+                        <li>Hạn sử dụng: 12 tháng sau khi mở nắp</li>
+                    </ul>
+                </div>
+                
+                <!-- Tab: Reviews -->
+                <div class="tab-content" id="reviews">
+                    <h4>Đánh Giá Từ Khách Hàng</h4>
+                    
+                    <!-- Review Summary -->
+                    <div style="display: flex; gap: 40px; margin-bottom: 40px; align-items: center; flex-wrap: wrap;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 4rem; font-weight: 600; color: var(--wine-red);">4.8</div>
+                            <div class="product-rating" style="margin: 10px 0;">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p style="color: #666;">126 đánh giá</p>
+                        </div>
+                        <div style="flex: 1; min-width: 250px;">
+                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                                <span>5 sao</span>
+                                <div style="flex: 1; height: 8px; background: #eee; border-radius: 4px;">
+                                    <div style="width: 80%; height: 100%; background: #d4af37; border-radius: 4px;"></div>
+                                </div>
+                                <span>80%</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                                <span>4 sao</span>
+                                <div style="flex: 1; height: 8px; background: #eee; border-radius: 4px;">
+                                    <div style="width: 15%; height: 100%; background: #d4af37; border-radius: 4px;"></div>
+                                </div>
+                                <span>15%</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                                <span>3 sao</span>
+                                <div style="flex: 1; height: 8px; background: #eee; border-radius: 4px;">
+                                    <div style="width: 5%; height: 100%; background: #d4af37; border-radius: 4px;"></div>
+                                </div>
+                                <span>5%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Individual Reviews -->
+                    <div style="border-top: 1px solid #eee; padding-top: 30px;">
+                        <!-- Review 1 -->
+                        <div style="margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px solid #eee;">
+                            <div style="display: flex; gap: 15px; margin-bottom: 15px;">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&h=60&q=80" 
+                                     alt="Avatar" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                                <div>
+                                    <h5 style="margin-bottom: 5px;">Nguyễn Thu Hà</h5>
+                                    <div style="display: flex; gap: 3px; color: #d4af37; font-size: 0.8rem;">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <span style="margin-left: auto; color: #999; font-size: 0.85rem;">15/02/2026</span>
+                            </div>
+                            <p style="color: #555; line-height: 1.7;">
+                                Mình đã dùng được 1 tháng và thấy da sáng lên rõ rệt. Vết thâm mụn cũng mờ đi 
+                                nhiều. Texture serum rất nhẹ, thấm nhanh, không gây nhờn rít. Mùi hương 
+                                cam nhẹ nhàng rất dễ chịu. Sẽ repurchase chắc chắn!
+                            </p>
+                        </div>
+                        
+                        <!-- Review 2 -->
+                        <div style="margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px solid #eee;">
+                            <div style="display: flex; gap: 15px; margin-bottom: 15px;">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&h=60&q=80" 
+                                     alt="Avatar" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                                <div>
+                                    <h5 style="margin-bottom: 5px;">Lê Phương Anh</h5>
+                                    <div style="display: flex; gap: 3px; color: #d4af37; font-size: 0.8rem;">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                                <span style="margin-left: auto; color: #999; font-size: 0.85rem;">10/02/2026</span>
+                            </div>
+                            <p style="color: #555; line-height: 1.7;">
+                                Serum này là best seller có lý do của nó. Dùng được 2 tuần đã thấy da tone up 
+                                lên. Mình da hỗn hợp thiên dầu nhưng dùng vẫn ổn, không bị bít lỗ chân lông. 
+                                Giá hơi cao nhưng xứng đáng với chất lượng.
+                            </p>
+                        </div>
+                        
+                        <!-- Review 3 -->
+                        <div>
+                            <div style="display: flex; gap: 15px; margin-bottom: 15px;">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&h=60&q=80" 
+                                     alt="Avatar" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                                <div>
+                                    <h5 style="margin-bottom: 5px;">Trần Minh Đức</h5>
+                                    <div style="display: flex; gap: 3px; color: #d4af37; font-size: 0.8rem;">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <span style="margin-left: auto; color: #999; font-size: 0.85rem;">05/02/2026</span>
+                            </div>
+                            <p style="color: #555; line-height: 1.7;">
+                                Là nam giới nhưng mình cũng quan tâm đến skincare. Serum này dùng thấy da 
+                                khỏe hơn, không còn xỉn màu như trước. Đặc biệt mình thích vì không có mùi 
+                                nữ tính quá, rất phù hợp cho cả nam dùng.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         RELATED PRODUCTS
+    ============================================= -->
+    <section class="products" style="padding-top: 0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sản Phẩm Liên Quan</h2>
+                <p>Những sản phẩm khác bạn có thể quan tâm</p>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Related Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-badge badge-new">Mới</span>
+                        <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Kem dưỡng ẩm" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">LUXE Skincare</span>
+                        <h4 class="product-name">
+                            <a href="product-new.html">Kem Dưỡng Ẩm Hyaluronic</a>
+                        </h4>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">720.000₫</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Related Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-badge badge-bestseller">Best Seller</span>
+                        <img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Mặt nạ dưỡng da" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">LUXE Skincare</span>
+                        <h4 class="product-name">
+                            <a href="product-new.html">Mặt Nạ Collagen Vàng 24K</a>
+                        </h4>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-original">550.000₫</span>
+                            <span class="price-current">450.000₫</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Related Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1570194065650-d99fb4de8e38?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Toner" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">LUXE Skincare</span>
+                        <h4 class="product-name">
+                            <a href="product-new.html">Toner Cân Bằng Da</a>
+                        </h4>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">380.000₫</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Related Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-badge badge-sale">-15%</span>
+                        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Kem chống nắng" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">LUXE Skincare</span>
+                        <h4 class="product-name">
+                            <a href="product-new.html">Kem Chống Nắng SPF50+</a>
+                        </h4>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-original">520.000₫</span>
+                            <span class="price-current">442.000₫</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+    ============================================= -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>LUXE</h3>
+                <p>
+                    LUXE Beauty - Thương hiệu mỹ phẩm cao cấp hàng đầu Việt Nam, 
+                    mang đến những sản phẩm chăm sóc da và trang điểm chất lượng 
+                    quốc tế cho phái đẹp.
+                </p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Liên Kết</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Về Chúng Tôi</a></li>
+                    <li><a href="#">Cửa Hàng</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Liên Hệ</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Hỗ Trợ</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Danh Mục</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Chăm sóc da</a></li>
+                    <li><a href="#">Trang điểm</a></li>
+                    <li><a href="#">Dành cho nam</a></li>
+                    <li><a href="#">Nước hoa</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Liên Hệ</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Nguyễn Huệ, Q.1, TP.HCM</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>1900 1234 56</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@luxebeauty.vn</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 LUXE Beauty. Tất cả quyền được bảo lưu.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Điều khoản dịch vụ</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Lên đầu trang">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="JS/app.js"></script>
+    <script>
+        // Product Detail Page Scripts
+        
+        // Change main image
+        function changeImage(thumb, imageSrc) {
+            document.getElementById('mainImage').src = imageSrc;
+            document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+        }
+        
+        // Change quantity
+        function changeQuantity(delta) {
+            const input = document.getElementById('quantity');
+            let value = parseInt(input.value) + delta;
+            if (value < 1) value = 1;
+            if (value > 10) value = 10;
+            input.value = value;
+        }
+        
+        // Size button selection
+        document.querySelectorAll('.size-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+        
+        // Tab functionality
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const tabId = this.dataset.tab;
+                
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                this.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Add to cart from detail page
+        document.getElementById('addToCartBtn').addEventListener('click', function() {
+            const quantity = parseInt(document.getElementById('quantity').value);
+            const product = {
+                id: 1,
+                name: 'Serum Vitamin C Rạng Rỡ',
+                price: 680000,
+                image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+                quantity: quantity
+            };
+            
+            // Get cart from localStorage
+            let cart = JSON.parse(localStorage.getItem('luxeCart')) || [];
+            
+            // Check if product exists
+            const existingIndex = cart.findIndex(item => item.id === product.id);
+            if (existingIndex > -1) {
+                cart[existingIndex].quantity += quantity;
+            } else {
+                cart.push(product);
+            }
+            
+            // Save cart
+            localStorage.setItem('luxeCart', JSON.stringify(cart));
+            
+            // Update cart count
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cartCount').textContent = totalItems;
+            
+            // Show notification
+            alert('Đã thêm sản phẩm vào giỏ hàng!');
+        });
+    </script>
+</body>
+</html>

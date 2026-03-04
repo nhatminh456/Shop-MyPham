@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <!-- Meta Tags Cơ bản -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>LUXE Beauty | Mỹ Phẩm Cao Cấp Dành Cho Nam & Nữ</title>
+    <meta name="description" content="LUXE Beauty - Thương hiệu mỹ phẩm cao cấp hàng đầu Việt Nam. Sản phẩm chăm sóc da, trang điểm dành cho nam và nữ. Vận chuyển toàn quốc.">
+    <meta name="keywords" content="mỹ phẩm cao cấp, skincare, chăm sóc da, serum, kem dưỡng, mỹ phẩm nam, mỹ phẩm nữ">
+    <meta name="author" content="LUXE Beauty">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://luxebeauty.vn/">
+    <meta property="og:title" content="LUXE Beauty | Mỹ Phẩm Cao Cấp">
+    <meta property="og:description" content="Khám phá bộ sưu tập mỹ phẩm cao cấp dành cho nam và nữ.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- ============================================
+         NAVBAR - Menu điều hướng cố định
+    ============================================= -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <a href="index-new.html" class="nav-logo">LUXE</a>
+            
+            <!-- Menu chính -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Trang Chủ</a></li>
+                <li><a href="#categories" class="nav-link">Danh Mục</a></li>
+                <li><a href="#products" class="nav-link">Sản Phẩm</a></li>
+                <li><a href="#reviews" class="nav-link">Đánh Giá</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contact" class="nav-link">Liên Hệ</a></li>
+            </ul>
+            
+            <!-- Icons bên phải -->
+            <div class="nav-icons">
+                <a href="#" class="nav-icon" aria-label="Tìm kiếm">
+                    <i class="fas fa-search"></i>
+                </a>
+                <a href="#" class="nav-icon" aria-label="Yêu thích">
+                    <i class="fas fa-heart"></i>
+                </a>
+                <a href="cart-new.html" class="nav-icon" aria-label="Giỏ hàng">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+            
+            <!-- Mobile menu toggle -->
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION - Banner chính
+    ============================================= -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="hero-subtitle">Bộ Sưu Tập Mùa Xuân 2026</span>
+            <h1 class="hero-title">Tỏa Sáng <span>Vẻ Đẹp</span> Của Bạn</h1>
+            <p class="hero-description">
+                Khám phá bộ sưu tập mỹ phẩm cao cấp được chọn lọc kỹ lưỡng, 
+                mang đến vẻ đẹp tự nhiên và rạng rỡ cho bạn.
+            </p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">Khám Phá Ngay</a>
+                <a href="#categories" class="btn btn-white">Xem Danh Mục</a>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="hero-scroll">
+            <span>Cuộn xuống</span>
+            <div class="hero-scroll-icon"></div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CATEGORIES - Danh mục sản phẩm
+    ============================================= -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-title">
+                <h2>Danh Mục Sản Phẩm</h2>
+                <p>Khám phá các dòng sản phẩm được yêu thích nhất tại LUXE Beauty</p>
+            </div>
+            
+            <div class="categories-grid">
+                <!-- Category 1: Chăm sóc da -->
+                <div class="category-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1570194065650-d99fb4de8e38?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Chăm sóc da" loading="lazy">
+                    <div class="category-content">
+                        <h3>Chăm Sóc Da</h3>
+                        <p>Serum, kem dưỡng, toner cao cấp</p>
+                    </div>
+                </div>
+                
+                <!-- Category 2: Trang điểm -->
+                <div class="category-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Trang điểm" loading="lazy">
+                    <div class="category-content">
+                        <h3>Trang Điểm</h3>
+                        <p>Son môi, phấn nền, mascara</p>
+                    </div>
+                </div>
+                
+                <!-- Category 3: Dành cho Nam -->
+                <div class="category-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1581182800629-7d90925ad072?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Dành cho Nam" loading="lazy">
+                    <div class="category-content">
+                        <h3>Dành Cho Nam</h3>
+                        <p>Sản phẩm chăm sóc da nam giới</p>
+                    </div>
+                </div>
+                
+                <!-- Category 4: Nước hoa -->
+                <div class="category-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Nước hoa" loading="lazy">
+                    <div class="category-content">
+                        <h3>Nước Hoa</h3>
+                        <p>Hương thơm quyến rũ cao cấp</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PRODUCTS - Grid sản phẩm
+    ============================================= -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sản Phẩm Nổi Bật</h2>
+                <p>Những sản phẩm được yêu thích và đánh giá cao nhất từ khách hàng</p>
+            </div>
+            
+            <!-- Filter tabs -->
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">Tất Cả</button>
+                <button class="filter-btn" data-filter="skincare">Chăm Sóc Da</button>
+                <button class="filter-btn" data-filter="makeup">Trang Điểm</button>
+                <button class="filter-btn" data-filter="men">Dành Cho Nam</button>
+                <button class="filter-btn" data-filter="fragrance">Nước Hoa</button>
+            </div>
+            
+            <!-- Product Grid -->
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card fade-in" data-category="skincare">
+                    <div class="product-image">
+                        <span class="product-badge badge-bestseller">Best Seller</span>
+                        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Serum Vitamin C LUXE" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Thêm yêu thích"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Xem nhanh"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn" aria-label="So sánh"><i class="fas fa-exchange-alt"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">LUXE Skincare</span>
+                        <h4 class="product-name">
+                            <a href="product-new.html">Serum Vitamin C Rạng Rỡ</a>
+                        </h4>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-original">850.000₫</span>
+                            <span class="price-current">680.000₫</span>
+                        </div>
+                        <button class="btn-add-cart" data-id="1" data-name="Serum Vitamin C Rạng Rỡ" data-price="680000" data-image="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                            Thêm Vào Giỏ
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card fade-in" data-category="skincare">
+                    <div class="product-image">
+                        <span class="product-badge badge-new">Mới</span>
+                        <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Kem dưỡng ẩm" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Thêm yêu thích"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Xem nhanh"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn" aria-label="So sánh"><i class="fas fa-exchange-alt"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">LUXE Skincare</span>
+                        <h4 class="product-name">
+                            <a href="product-new.html">Kem Dưỡng Ẩm Hyaluronic</a>
+                        </h4>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">720.000₫</span>
+                        </div>
+                        <button class="btn-add-cart" data-id="2" data-name="Kem Dưỡng Ẩm Hyaluronic" data-price="720000" data-image="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                            Thêm Vào Giỏ
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card fade-in" data-category="makeup">
+                    <div class="product-image">
+                        <span class="product-badge badge-sale">-30%</span>
+                        <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Son môi cao cấp" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Thêm yêu thích"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Xem nhanh"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn" aria-label="So sánh"><i class="fas fa-exchange-alt"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">LUXE Makeup</span>
+                        <h4 class="product-name">
+                            <a href="product-new.html">Son Lì Velvet Rouge</a>
+                        </h4>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-original">450.000₫</span>
+                            <span class="price-current">315.000₫</span>
+                        </div>
+                        <button class="btn-add-cart" data-id="3" data-name="Son Lì Velvet Rouge" data-price="315000" data-image="https://images.unsplash.com/photo-1586495777744-4413f21062fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                            Thêm Vào Giỏ
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card fade-in" data-category="fragrance">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Nước hoa cao cấp" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Thêm yêu thích"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Xem nhanh"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn" aria-label="So sánh"><i class="fas fa-exchange-alt"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">LUXE Parfum</span>
+                        <h4 class="product-name">
+                            <a href="product-new.html">Nước Hoa Midnight Rose</a>
+                        </h4>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">1.850.000₫</span>
+                        </div>
+                        <button class="btn-add-cart" data-id="4" data-name="Nước Hoa Midnight Rose" data-price="1850000" data-image="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                            Thêm Vào Giỏ
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="product-card fade-in" data-category="men">
+                    <div class="product-image">
+                        <span class="product-badge badge-new">Mới</span>
+                        <img src="https://images.unsplash.com/photo-1621607505837-8d5c77f664bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Sản phẩm nam giới" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Thêm yêu thích"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Xem nhanh"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn" aria-label="So sánh"><i class="fas fa-exchange-alt"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">LUXE For Men</span>
+                        <h4 class="product-name">
+                            <a href="product-new.html">Gel Rửa Mặt Than Hoạt Tính</a>
+                        </h4>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">380.000₫</span>
+                        </div>
+                        <button class="btn-add-cart" data-id="5" data-name="Gel Rửa Mặt Than Hoạt Tính" data-price="380000" data-image="https://images.unsplash.com/photo-1621607505837-8d5c77f664bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                            Thêm Vào Giỏ
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="product-card fade-in" data-category="skincare">
+                    <div class="product-image">
+                        <span class="product-badge badge-bestseller">Best Seller</span>
+                        <img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Mặt nạ dưỡng da" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Thêm yêu thích"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Xem nhanh"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn" aria-label="So sánh"><i class="fas fa-exchange-alt"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">LUXE Skincare</span>
+                        <h4 class="product-name">
+                            <a href="product-new.html">Mặt Nạ Collagen Vàng 24K</a>
+                        </h4>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-original">550.000₫</span>
+                            <span class="price-current">450.000₫</span>
+                        </div>
+                        <button class="btn-add-cart" data-id="6" data-name="Mặt Nạ Collagen Vàng 24K" data-price="450000" data-image="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                            Thêm Vào Giỏ
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 7 -->
+                <div class="product-card fade-in" data-category="makeup">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Phấn nền cao cấp" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Thêm yêu thích"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Xem nhanh"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn" aria-label="So sánh"><i class="fas fa-exchange-alt"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">LUXE Makeup</span>
+                        <h4 class="product-name">
+                            <a href="product-new.html">Phấn Nền Cushion Glow</a>
+                        </h4>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">890.000₫</span>
+                        </div>
+                        <button class="btn-add-cart" data-id="7" data-name="Phấn Nền Cushion Glow" data-price="890000" data-image="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                            Thêm Vào Giỏ
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 8 -->
+                <div class="product-card fade-in" data-category="men">
+                    <div class="product-image">
+                        <span class="product-badge badge-sale">-20%</span>
+                        <img src="https://images.unsplash.com/photo-1626285861696-9f0bf5a49c6d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Kem cạo râu" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Thêm yêu thích"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Xem nhanh"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn" aria-label="So sánh"><i class="fas fa-exchange-alt"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">LUXE For Men</span>
+                        <h4 class="product-name">
+                            <a href="product-new.html">Kem Dưỡng After Shave</a>
+                        </h4>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-original">420.000₫</span>
+                            <span class="price-current">336.000₫</span>
+                        </div>
+                        <button class="btn-add-cart" data-id="8" data-name="Kem Dưỡng After Shave" data-price="336000" data-image="https://images.unsplash.com/photo-1626285861696-9f0bf5a49c6d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                            Thêm Vào Giỏ
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- View All Button -->
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="#" class="btn btn-outline">Xem Tất Cả Sản Phẩm</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FEATURED - Sản phẩm nổi bật
+    ============================================= -->
+    <section class="featured">
+        <div class="container">
+            <div class="featured-container">
+                <div class="featured-content slide-in-left">
+                    <h2>Bộ Sưu Tập <span>Exclusive</span> 2026</h2>
+                    <p>
+                        Khám phá dòng sản phẩm độc quyền được phát triển bởi đội ngũ chuyên gia 
+                        hàng đầu, sử dụng công nghệ tiên tiến nhất trong ngành công nghiệp làm đẹp.
+                    </p>
+                    <ul class="featured-list">
+                        <li><i class="fas fa-check"></i> Chiết xuất từ thiên nhiên 100%</li>
+                        <li><i class="fas fa-check"></i> Không thử nghiệm trên động vật</li>
+                        <li><i class="fas fa-check"></i> Công thức độc quyền cấp ẩm 72 giờ</li>
+                        <li><i class="fas fa-check"></i> Phù hợp mọi loại da</li>
+                    </ul>
+                    <a href="#products" class="btn btn-primary">Mua Ngay</a>
+                </div>
+                <div class="featured-image slide-in-right">
+                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Bộ sưu tập Exclusive" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         REVIEWS - Đánh giá khách hàng
+    ============================================= -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-title">
+                <h2>Khách Hàng Nói Gì</h2>
+                <p>Những chia sẻ chân thực từ khách hàng đã trải nghiệm sản phẩm của chúng tôi</p>
+            </div>
+            
+            <div class="reviews-slider">
+                <!-- Review 1 -->
+                <div class="review-card" id="review-1">
+                    <div class="review-content">
+                        <div class="review-quote">"</div>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">
+                            Tôi đã sử dụng Serum Vitamin C được 3 tháng và thật sự ấn tượng. 
+                            Da mặt tôi sáng hơn rõ rệt, các vết thâm mờ dần. Sản phẩm thấm nhanh, 
+                            không gây nhờn rít. Chắc chắn sẽ mua lại!
+                        </p>
+                        <div class="review-author">
+                            <div class="review-avatar">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                                     alt="Nguyễn Thu Hà">
+                            </div>
+                            <h4>Nguyễn Thu Hà</h4>
+                            <span>Khách hàng thân thiết</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Review 2 (Hidden by default) -->
+                <div class="review-card" id="review-2" style="display: none;">
+                    <div class="review-content">
+                        <div class="review-quote">"</div>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">
+                            Là nam giới, tôi khá kỹ tính trong việc chọn sản phẩm chăm sóc da. 
+                            Dòng LUXE For Men thực sự phù hợp - mùi hương nam tính, texture nhẹ, 
+                            hiệu quả thấy rõ sau 2 tuần sử dụng.
+                        </p>
+                        <div class="review-author">
+                            <div class="review-avatar">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                                     alt="Trần Minh Đức">
+                            </div>
+                            <h4>Trần Minh Đức</h4>
+                            <span>Doanh nhân</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Review 3 (Hidden by default) -->
+                <div class="review-card" id="review-3" style="display: none;">
+                    <div class="review-content">
+                        <div class="review-quote">"</div>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="review-text">
+                            Mặt nạ Collagen 24K là sản phẩm yêu thích của tôi! Chỉ cần đắp 20 phút, 
+                            da căng mọng và mềm mịn ngay lập tức. Giá hơi cao nhưng hoàn toàn xứng đáng 
+                            với chất lượng nhận được.
+                        </p>
+                        <div class="review-author">
+                            <div class="review-avatar">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                                     alt="Lê Phương Anh">
+                            </div>
+                            <h4>Lê Phương Anh</h4>
+                            <span>Beauty Blogger</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Review Navigation -->
+            <div class="review-nav">
+                <button class="review-nav-btn" id="prevReview" aria-label="Đánh giá trước">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="review-nav-btn" id="nextReview" aria-label="Đánh giá tiếp">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <div class="review-dots">
+                <span class="review-dot active" data-index="1"></span>
+                <span class="review-dot" data-index="2"></span>
+                <span class="review-dot" data-index="3"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         BLOG - Bài viết chăm sóc da
+    ============================================= -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="section-title">
+                <h2>Blog Làm Đẹp</h2>
+                <p>Cập nhật những bí quyết chăm sóc da và xu hướng làm đẹp mới nhất</p>
+            </div>
+            
+            <div class="blog-grid">
+                <!-- Blog Post 1 -->
+                <article class="blog-card fade-in">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Quy trình skincare" loading="lazy">
+                        <span class="blog-category">Skincare</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 20 Tháng 2, 2026</span>
+                            <span><i class="far fa-clock"></i> 5 phút đọc</span>
+                        </div>
+                        <h3 class="blog-title">
+                            <a href="#">10 Bước Skincare Chuẩn Hàn Quốc Cho Làn Da Hoàn Hảo</a>
+                        </h3>
+                        <p class="blog-excerpt">
+                            Khám phá quy trình chăm sóc da 10 bước nổi tiếng của phụ nữ Hàn Quốc 
+                            giúp da luôn căng mướt và tràn đầy sức sống...
+                        </p>
+                        <a href="#" class="blog-link">
+                            Đọc Tiếp <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Blog Post 2 -->
+                <article class="blog-card fade-in">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Chống lão hóa" loading="lazy">
+                        <span class="blog-category">Anti-Aging</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 18 Tháng 2, 2026</span>
+                            <span><i class="far fa-clock"></i> 7 phút đọc</span>
+                        </div>
+                        <h3 class="blog-title">
+                            <a href="#">Bí Quyết Chống Lão Hóa Từ Tuổi 25 - Đừng Bỏ Lỡ!</a>
+                        </h3>
+                        <p class="blog-excerpt">
+                            Tuổi 25 là thời điểm vàng để bắt đầu chống lão hóa. Tìm hiểu những 
+                            thành phần và sản phẩm cần thiết cho làn da trẻ trung...
+                        </p>
+                        <a href="#" class="blog-link">
+                            Đọc Tiếp <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Blog Post 3 -->
+                <article class="blog-card fade-in">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1487412912498-0447578fcca8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Skincare cho nam" loading="lazy">
+                        <span class="blog-category">For Men</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 15 Tháng 2, 2026</span>
+                            <span><i class="far fa-clock"></i> 4 phút đọc</span>
+                        </div>
+                        <h3 class="blog-title">
+                            <a href="#">Hướng Dẫn Chăm Sóc Da Cơ Bản Dành Riêng Cho Nam Giới</a>
+                        </h3>
+                        <p class="blog-excerpt">
+                            Da nam giới có những đặc điểm riêng biệt cần được chăm sóc đúng cách. 
+                            Cùng tìm hiểu routine đơn giản nhưng hiệu quả...
+                        </p>
+                        <a href="#" class="blog-link">
+                            Đọc Tiếp <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         NEWSLETTER - Đăng ký nhận tin
+    ============================================= -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Đăng Ký Nhận Ưu Đãi</h2>
+            <p>Nhận ngay voucher giảm 15% cho đơn hàng đầu tiên và cập nhật những ưu đãi độc quyền.</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Nhập email của bạn..." required>
+                <button type="submit">Đăng Ký</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER - Chân trang
+    ============================================= -->
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <!-- Brand Info -->
+            <div class="footer-brand">
+                <h3>LUXE</h3>
+                <p>
+                    LUXE Beauty - Thương hiệu mỹ phẩm cao cấp hàng đầu Việt Nam, 
+                    mang đến những sản phẩm chăm sóc da và trang điểm chất lượng 
+                    quốc tế cho phái đẹp.
+                </p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="footer-column">
+                <h4>Liên Kết</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Về Chúng Tôi</a></li>
+                    <li><a href="#">Cửa Hàng</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Liên Hệ</a></li>
+                    <li><a href="#">Tuyển Dụng</a></li>
+                </ul>
+            </div>
+            
+            <!-- Customer Service -->
+            <div class="footer-column">
+                <h4>Hỗ Trợ</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Điều khoản sử dụng</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            
+            <!-- Categories -->
+            <div class="footer-column">
+                <h4>Danh Mục</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Chăm sóc da</a></li>
+                    <li><a href="#">Trang điểm</a></li>
+                    <li><a href="#">Dành cho nam</a></li>
+                    <li><a href="#">Nước hoa</a></li>
+                    <li><a href="#">Quà tặng</a></li>
+                </ul>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="footer-column">
+                <h4>Liên Hệ</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Nguyễn Huệ, Quận 1, TP.HCM</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>0902578541</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>tranminh29012005@gmail.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span>T2 - CN: 8:00 - 22:00</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nhật Minh.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Điều khoản dịch vụ</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Lên đầu trang">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="JS/app.js"></script>
+</body>
+</html>

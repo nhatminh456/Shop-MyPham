@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>Giỏ Hàng | LUXE Beauty</title>
+    <meta name="description" content="Giỏ hàng của bạn tại LUXE Beauty - Thanh toán nhanh chóng, vận chuyển toàn quốc.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- ============================================
+         NAVBAR
+    ============================================= -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="navbar-container">
+            <a href="index-new.html" class="nav-logo">LUXE</a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index-new.html" class="nav-link">Trang Chủ</a></li>
+                <li><a href="index-new.html#categories" class="nav-link">Danh Mục</a></li>
+                <li><a href="index-new.html#products" class="nav-link">Sản Phẩm</a></li>
+                <li><a href="index-new.html#reviews" class="nav-link">Đánh Giá</a></li>
+                <li><a href="index-new.html#blog" class="nav-link">Blog</a></li>
+                <li><a href="index-new.html#contact" class="nav-link">Liên Hệ</a></li>
+            </ul>
+            
+            <div class="nav-icons">
+                <a href="#" class="nav-icon" aria-label="Tìm kiếm">
+                    <i class="fas fa-search"></i>
+                </a>
+                <a href="#" class="nav-icon" aria-label="Yêu thích">
+                    <i class="fas fa-heart"></i>
+                </a>
+                <a href="cart-new.html" class="nav-icon" aria-label="Giỏ hàng">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+            
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         BREADCRUMB
+    ============================================= -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li><a href="index-new.html">Trang chủ</a></li>
+                <li><span>/</span></li>
+                <li class="current">Giỏ hàng</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ============================================
+         CART PAGE
+    ============================================= -->
+    <section class="cart-page">
+        <div class="container">
+            <!-- Cart with items -->
+            <div class="cart-container" id="cartWithItems">
+                <!-- Cart Items -->
+                <div class="cart-items">
+                    <div class="cart-header">
+                        <h1>Giỏ Hàng</h1>
+                        <span class="cart-count-text" id="cartItemCount">0 sản phẩm</span>
+                    </div>
+                    
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 45%;">Sản phẩm</th>
+                                <th style="width: 15%;">Đơn giá</th>
+                                <th style="width: 15%;">Số lượng</th>
+                                <th style="width: 15%;">Thành tiền</th>
+                                <th style="width: 10%;"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="cartTableBody">
+                            <!-- Cart items will be rendered here by JavaScript -->
+                        </tbody>
+                    </table>
+                    
+                    <a href="index-new.html#products" class="continue-shopping">
+                        <i class="fas fa-arrow-left"></i>
+                        Tiếp tục mua sắm
+                    </a>
+                </div>
+                
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <h3>Tổng Đơn Hàng</h3>
+                    
+                    <div class="summary-row">
+                        <span>Tạm tính</span>
+                        <span id="subtotal">0₫</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span>Phí vận chuyển</span>
+                        <span id="shipping">Miễn phí</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span>Giảm giá</span>
+                        <span id="discount">0₫</span>
+                    </div>
+                    
+                    <div class="summary-row total">
+                        <span>Tổng cộng</span>
+                        <span id="total">0₫</span>
+                    </div>
+                    
+                    <button class="btn btn-primary" onclick="checkout()">
+                        Tiến Hành Thanh Toán
+                    </button>
+                    
+                    <form class="coupon-form" id="couponForm">
+                        <input type="text" placeholder="Mã giảm giá" id="couponInput">
+                        <button type="submit">Áp dụng</button>
+                    </form>
+                    
+                    <!-- Payment Methods -->
+                    <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid #e8e4e0;">
+                        <p style="font-size: 0.85rem; color: #999; margin-bottom: 10px;">Phương thức thanh toán</p>
+                        <div style="display: flex; gap: 10px;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" style="height: 25px;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" style="height: 25px;">
+                            <img src="https://upload.wikimedia.org/wikipedia/vi/f/fe/MoMo_Logo.png" alt="MoMo" style="height: 25px;">
+                        </div>
+                    </div>
+                    
+                    <!-- Shipping Info -->
+                    <div style="margin-top: 20px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                            <i class="fas fa-truck" style="color: var(--wine-red);"></i>
+                            <span style="font-size: 0.85rem;">Miễn phí ship đơn từ 500.000₫</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                            <i class="fas fa-undo" style="color: var(--wine-red);"></i>
+                            <span style="font-size: 0.85rem;">Đổi trả miễn phí trong 30 ngày</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-shield-alt" style="color: var(--wine-red);"></i>
+                            <span style="font-size: 0.85rem;">Cam kết chính hãng 100%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Empty Cart -->
+            <div class="cart-empty" id="cartEmpty" style="display: none;">
+                <i class="fas fa-shopping-bag"></i>
+                <h2>Giỏ hàng trống</h2>
+                <p>Bạn chưa có sản phẩm nào trong giỏ hàng. Hãy khám phá các sản phẩm của chúng tôi!</p>
+                <a href="index-new.html#products" class="btn btn-primary">Mua Sắm Ngay</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         RECOMMENDED PRODUCTS
+    ============================================= -->
+    <section class="products" style="padding-top: 0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Có Thể Bạn Sẽ Thích</h2>
+                <p>Những sản phẩm được nhiều khách hàng yêu thích</p>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-badge badge-bestseller">Best Seller</span>
+                        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Serum Vitamin C" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">LUXE Skincare</span>
+                        <h4 class="product-name">
+                            <a href="product-new.html">Serum Vitamin C Rạng Rỡ</a>
+                        </h4>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-original">850.000₫</span>
+                            <span class="price-current">680.000₫</span>
+                        </div>
+                        <button class="btn-add-cart" data-id="1" data-name="Serum Vitamin C Rạng Rỡ" data-price="680000" data-image="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                            Thêm Vào Giỏ
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-badge badge-new">Mới</span>
+                        <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Kem dưỡng ẩm" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">LUXE Skincare</span>
+                        <h4 class="product-name">
+                            <a href="product-new.html">Kem Dưỡng Ẩm Hyaluronic</a>
+                        </h4>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">720.000₫</span>
+                        </div>
+                        <button class="btn-add-cart" data-id="2" data-name="Kem Dưỡng Ẩm Hyaluronic" data-price="720000" data-image="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                            Thêm Vào Giỏ
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-badge badge-sale">-30%</span>
+                        <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Son môi" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">LUXE Makeup</span>
+                        <h4 class="product-name">
+                            <a href="product-new.html">Son Lì Velvet Rouge</a>
+                        </h4>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-original">450.000₫</span>
+                            <span class="price-current">315.000₫</span>
+                        </div>
+                        <button class="btn-add-cart" data-id="3" data-name="Son Lì Velvet Rouge" data-price="315000" data-image="https://images.unsplash.com/photo-1586495777744-4413f21062fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                            Thêm Vào Giỏ
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Nước hoa" loading="lazy">
+                        <div class="product-actions">
+                            <button class="action-btn"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">LUXE Parfum</span>
+                        <h4 class="product-name">
+                            <a href="product-new.html">Nước Hoa Midnight Rose</a>
+                        </h4>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">1.850.000₫</span>
+                        </div>
+                        <button class="btn-add-cart" data-id="4" data-name="Nước Hoa Midnight Rose" data-price="1850000" data-image="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                            Thêm Vào Giỏ
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+    ============================================= -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>LUXE</h3>
+                <p>
+                    LUXE Beauty - Thương hiệu mỹ phẩm cao cấp hàng đầu Việt Nam, 
+                    mang đến những sản phẩm chăm sóc da và trang điểm chất lượng 
+                    quốc tế cho phái đẹp.
+                </p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Liên Kết</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Về Chúng Tôi</a></li>
+                    <li><a href="#">Cửa Hàng</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Liên Hệ</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Hỗ Trợ</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Danh Mục</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Chăm sóc da</a></li>
+                    <li><a href="#">Trang điểm</a></li>
+                    <li><a href="#">Dành cho nam</a></li>
+                    <li><a href="#">Nước hoa</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Liên Hệ</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Nguyễn Huệ, Q.1, TP.HCM</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>1900 1234 56</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@luxebeauty.vn</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 LUXE Beauty. Tất cả quyền được bảo lưu.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Điều khoản dịch vụ</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Lên đầu trang">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="JS/app.js"></script>
+    <script>
+        // ============================================
+        // CART PAGE SPECIFIC SCRIPTS
+        // ============================================
+        
+        // Format price to VND
+        function formatPrice(price) {
+            return new Intl.NumberFormat('vi-VN').format(price) + '₫';
+        }
+        
+        // Render cart items
+        function renderCart() {
+            const cart = JSON.parse(localStorage.getItem('luxeCart')) || [];
+            const cartBody = document.getElementById('cartTableBody');
+            const cartWithItems = document.getElementById('cartWithItems');
+            const cartEmpty = document.getElementById('cartEmpty');
+            
+            if (cart.length === 0) {
+                cartWithItems.style.display = 'none';
+                cartEmpty.style.display = 'block';
+                return;
+            }
+            
+            cartWithItems.style.display = 'grid';
+            cartEmpty.style.display = 'none';
+            
+            // Update item count
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cartItemCount').textContent = totalItems + ' sản phẩm';
+            
+            // Render items
+            cartBody.innerHTML = cart.map((item, index) => `
+                <tr>
+                    <td data-label="Sản phẩm">
+                        <div class="cart-product">
+                            <div class="cart-product-image">
+                                <img src="${item.image}" alt="${item.name}">
+                            </div>
+                            <div class="cart-product-info">
+                                <h4>${item.name}</h4>
+                                <span>LUXE Beauty</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td data-label="Đơn giá" class="cart-price">${formatPrice(item.price)}</td>
+                    <td data-label="Số lượng">
+                        <div class="cart-quantity">
+                            <button class="cart-qty-btn" onclick="updateQuantity(${index}, -1)">−</button>
+                            <input type="number" class="cart-qty-input" value="${item.quantity}" min="1" max="10" 
+                                   onchange="setQuantity(${index}, this.value)">
+                            <button class="cart-qty-btn" onclick="updateQuantity(${index}, 1)">+</button>
+                        </div>
+                    </td>
+                    <td data-label="Thành tiền" class="cart-total">${formatPrice(item.price * item.quantity)}</td>
+                    <td>
+                        <button class="cart-remove" onclick="removeItem(${index})" aria-label="Xóa sản phẩm">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </td>
+                </tr>
+            `).join('');
+            
+            // Update summary
+            updateSummary();
+        }
+        
+        // Update quantity
+        function updateQuantity(index, delta) {
+            let cart = JSON.parse(localStorage.getItem('luxeCart')) || [];
+            cart[index].quantity = Math.max(1, Math.min(10, cart[index].quantity + delta));
+            localStorage.setItem('luxeCart', JSON.stringify(cart));
+            renderCart();
+            updateCartCount();
+        }
+        
+        // Set quantity directly
+        function setQuantity(index, value) {
+            let cart = JSON.parse(localStorage.getItem('luxeCart')) || [];
+            cart[index].quantity = Math.max(1, Math.min(10, parseInt(value) || 1));
+            localStorage.setItem('luxeCart', JSON.stringify(cart));
+            renderCart();
+            updateCartCount();
+        }
+        
+        // Remove item
+        function removeItem(index) {
+            if (confirm('Bạn có chắc muốn xóa sản phẩm này?')) {
+                let cart = JSON.parse(localStorage.getItem('luxeCart')) || [];
+                cart.splice(index, 1);
+                localStorage.setItem('luxeCart', JSON.stringify(cart));
+                renderCart();
+                updateCartCount();
+            }
+        }
+        
+        // Update summary
+        function updateSummary() {
+            const cart = JSON.parse(localStorage.getItem('luxeCart')) || [];
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const shipping = subtotal >= 500000 ? 0 : 30000;
+            const discount = 0; // Can be updated with coupon
+            const total = subtotal + shipping - discount;
+            
+            document.getElementById('subtotal').textContent = formatPrice(subtotal);
+            document.getElementById('shipping').textContent = shipping === 0 ? 'Miễn phí' : formatPrice(shipping);
+            document.getElementById('discount').textContent = discount === 0 ? '0₫' : '-' + formatPrice(discount);
+            document.getElementById('total').textContent = formatPrice(total);
+        }
+        
+        // Update cart count in navbar
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('luxeCart')) || [];
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cartCount').textContent = totalItems;
+        }
+        
+        // Checkout
+        function checkout() {
+            const cart = JSON.parse(localStorage.getItem('luxeCart')) || [];
+            if (cart.length === 0) {
+                alert('Giỏ hàng trống!');
+                return;
+            }
+            alert('Cảm ơn bạn đã đặt hàng! Đơn hàng của bạn đang được xử lý.');
+            localStorage.removeItem('luxeCart');
+            renderCart();
+            updateCartCount();
+        }
+        
+        // Apply coupon
+        document.getElementById('couponForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const coupon = document.getElementById('couponInput').value.trim().toUpperCase();
+            
+            if (coupon === 'LUXE10') {
+                alert('Đã áp dụng mã giảm giá 10%!');
+            } else if (coupon === 'FREESHIP') {
+                alert('Đã áp dụng mã miễn phí vận chuyển!');
+            } else {
+                alert('Mã giảm giá không hợp lệ!');
+            }
+        });
+        
+        // Initialize cart page
+        document.addEventListener('DOMContentLoaded', function() {
+            renderCart();
+            updateCartCount();
+        });
+    </script>
+</body>
+</html>
